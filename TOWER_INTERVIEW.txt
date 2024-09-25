@@ -1,0 +1,13 @@
+As part of the IEEE SPS VIP Cup, I worked on a project focusing on Retinal OCT Image Classification under the guidance of Dr. Puneet Goyal at IIT Ropar. The challenge involved using deep learning techniques to classify noisy retinal OCT images into three categories: Healthy, DME (Diabetic Macular Edema), and Non-Diabetic.
+
+We approached the problem in multiple stages:
+
+1. Denoising: To enhance image quality, we employed a Self-Supervised Self2Self Network, an encoder-decoder architecture, alongside Conditional GANs (cGANs). These models effectively reduced noise in the retinal images, improving clarity without relying on clean training data, which was key given the real-world noisy dataset.
+
+2. Super Resolution: We then focused on enhancing the resolution of the images using a 2Encoder-1Decoder ESRGAN and cGAN models. These models significantly improved the detail and quality of low-resolution test images, which was crucial for better classification performance.
+
+3. Classification: After the images were denoised and enhanced, we used a pretrained ResNet-50 model, combined with the Channel Block Attention Module (CBAM), to classify the retinal volumes. The CBAM added attention mechanisms to help the model focus on the most relevant features of the images for better accuracy.
+
+As a result of our efforts, our team was selected as one of the top three finalists globally, and we’ll be presenting at the ICIP Conference in Abu Dhabi.
+
+In terms of implementation, we used various state-of-the-art models, including Self2Self Network, cGAN, ESRGAN, and ResNet-50 with CBAM, to build a robust pipeline that tackled noise reduction, super resolution, and final classification.
